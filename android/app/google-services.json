@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1036972034689",
+    "project_id": "igreja-e05d2",
+    "storage_bucket": "igreja-e05d2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1036972034689:android:ffb04155ecc897a1cb1b80",
+        "android_client_info": {
+          "package_name": "com.example.church"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCCVUfhLKjdkUuVTyyrCIAprEZSutkSrXQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
