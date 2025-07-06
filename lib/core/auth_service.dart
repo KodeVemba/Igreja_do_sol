@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -24,13 +25,28 @@ class AuthService {
 
   // Create an account , same layout as the create login
   Future<UserCredential> createAccount({
+    required String name,
     required String email,
     required String password,
   }) async {
-    return await firebaseAuth.createUserWithEmailAndPassword(
+    final credential = await firebaseAuth.createUserWithEmailAndPassword(
       email: email,
       password: password,
     );
+
+    final user = credential.user;
+    if (user != null) {
+      await user.updateDisplayName(name);
+
+      await FirebaseFirestore.instance.collection('readers').doc(user.uid).set({
+        'userId': user.uid,
+        'name': name,
+        'email': email,
+        'isMonitor': false,
+        'active': true,
+      });
+    }
+    return credential;
   }
 
   //sing out function
