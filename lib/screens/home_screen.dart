@@ -34,7 +34,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       bottomLeft: Radius.circular(100.0),
                       bottomRight: Radius.circular(100.0),
                     ),
-                    color: Colors.purple,
+                    color: Theme.of(context).colorScheme.secondary,
                   ),
                 ),
                 Positioned(
@@ -268,7 +268,9 @@ class _MyHomePageState extends State<MyHomePage> {
                         vertical: 10,
                       ),
                       decoration: BoxDecoration(
-                        color: isSelected ? Colors.purple : Colors.white,
+                        color: isSelected
+                            ? Theme.of(context).colorScheme.secondary
+                            : Colors.white,
                         borderRadius: BorderRadius.circular(12),
                         boxShadow: [
                           BoxShadow(
@@ -392,6 +394,11 @@ class _MyHomePageState extends State<MyHomePage> {
             icon: Icon(Icons.calendar_today_outlined),
             selectedIcon: Icon(Icons.calendar_today),
             label: 'Calendar',
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.article),
+            selectedIcon: Icon(Icons.article_outlined),
+            label: 'Feed',
           ),
           NavigationDestination(
             icon: Icon(Icons.person_outline),
