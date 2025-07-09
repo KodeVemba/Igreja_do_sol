@@ -386,13 +386,13 @@ class _MyHomePageState extends State<MyHomePage> {
         },
         destinations: [
           NavigationDestination(
-            icon: Icon(Icons.home_outlined),
-            selectedIcon: Icon(Icons.home),
+            icon: Icon(Icons.home),
+            selectedIcon: Icon(Icons.home_outlined),
             label: 'Home',
           ),
           NavigationDestination(
-            icon: Icon(Icons.calendar_today_outlined),
-            selectedIcon: Icon(Icons.calendar_today),
+            icon: Icon(Icons.calendar_today),
+            selectedIcon: Icon(Icons.calendar_today_outlined),
             label: 'Calendar',
           ),
           NavigationDestination(
@@ -401,8 +401,8 @@ class _MyHomePageState extends State<MyHomePage> {
             label: 'Feed',
           ),
           NavigationDestination(
-            icon: Icon(Icons.person_outline),
-            selectedIcon: Icon(Icons.person),
+            icon: Icon(Icons.person),
+            selectedIcon: Icon(Icons.person_outline),
             label: 'Profile',
           ),
         ],

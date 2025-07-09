@@ -58,7 +58,7 @@ class MyApp extends StatelessWidget {
       title: 'Church Scheduler',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(colorScheme: peacefulSkyScheme),
-      initialRoute: '/login',
+      initialRoute: '/admin',
       routes: {
         '/login': (context) => const MyLoginPage(),
         '/admin': (context) => const MyAdminPage(),
